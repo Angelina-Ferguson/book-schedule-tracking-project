@@ -1,0 +1,17 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODEMON_LEGACY_WATCH=true
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /src/app
+          ignore:
+            - node_modules/
+      
+  
