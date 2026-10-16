@@ -2,19 +2,28 @@ import './components/TopBar.js';
 
 import './pages/PageContent.js';
 import './pages/Dashboard.js';
+import './pages/TBRShelf.js';
+import './pages/ReadingSchedule.js';
+
 
 let selectedPage;
 
+document.addEventListener ("DOMContentLoaded", selectedPage = document.querySelector("#tb-btn-dashboard"));
+
 document.querySelectorAll(".top-bar-btn").forEach( (btn) => { btn.addEventListener("click", (e) => {
-    //alert("something clicked");
-    if (selectedPage) {selectedPage.style.backgroundColor = "white"}
-    e.target.style.backgroundColor = "orange";
+    if (selectedPage) {selectedPage.style.backgroundColor = "orange"; alert(selectedPage.textContent)}
+    e.target.style.backgroundColor = "white";
     selectedPage = e.target
-    //alert(e.target.innerText)
-    switch (e.target.innerText) {
-        case "Dashboard":
-            // run this when content loaded like a domcontentloaded event listener
-            document.getElementsByTagName("page-content").innerHTML = `<dashboard-page></dashboard-page>`
+    var cleanedText = selectedPage.innerText.replace(" ", "").toLowerCase()
+    switch (cleanedText) {
+        case "dashboard":
+            document.querySelector('page-content').innerHTML = `<dashboard-page></dashboard-page>`;            
+            break;
+        case "tbrshelf":
+            document.querySelector('page-content').innerHTML = `<tbr-shelf-page></tbr-shelf-page>`;            
+            break;
+        case "readingschedule":
+            document.querySelector('page-content').innerHTML = `<reading-schedule-page></reading-schedule-page>`;            
             break;
     }
 })});

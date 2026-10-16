@@ -10,7 +10,7 @@ class PageContent extends HTMLElement {
     }
     render () {      
         this.innerHTML = `
-        <p>no content to display</p>
+         <dashboard-page></dashboard-page>
         `;
 
     }
