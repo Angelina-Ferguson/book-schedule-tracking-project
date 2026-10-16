@@ -1,0 +1,25 @@
+Plans for shelf schduler and what it will do:
+1. allow readers to import their TBR books as well as any data from kindle/ libby or library
+2. allow readers to "schedule" these books.
+    this could be scheduled based on availability on libby as a book they have on hold (this could be estimated)
+    could be scheduled based on user preference
+    could be scheduled based on pricing? maybe if the user says they want to budget a certain amount of money for their books monthly (could factor in digital and physical)
+    can also factor in book releases or shipping arrivals
+3. allow the reader to adapt their schedule based on things that worked/didn't work. when schedules are created, factor in the following
+    excitement to read the book (star or 1-5 rank)
+    dnf frequency or duration before dnf (this should be the shortest amount of time the book can be scheduled for)
+    book duration + average reading pace (if logged, otherwise estimate based on book size in pages / days of completion)
+    allow for asynchronously reading multiple books at a time. maybe give reminders to untouched books ("you havent picked this one up in a while")
+
+
+consider future ways this tool could be used for people who are in a reading slump
+- allow the reader to mark books that are similar and whether they like or dislike that. 
+- compute a dnf frequency based on genre, author, or any other valuable metrics
+    if a user reaches a specific genre related frequency, offer alternative options or other genres they can try.
+
+
+MINIMAL GOALS FOR THE PROJECT:
+- dashboard:
+    has options for tbr shelf, Reading Schedule, Reading Tracking, Reading Stats
+- implement the tbr shelf
+- implement the reading schedule

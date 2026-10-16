@@ -38,7 +38,21 @@ const server = http.createServer((req, res) => {
                 res.end(content);
             }
         });
-    } else if (req.url === '/api' && req.method === 'GET') {
+    } else if (req.url.includes('/src/') && req.method === 'GET') {
+        const filePath = path.join('src', req.url.replace('/src/', ''));
+        fs.readFile(filePath, (err, content) => {
+            if (err) {
+                console.error("File Read Error:", err);
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end(`Internal Server Error: Could not read file at ${filePath}`);
+            } else {
+                res.writeHead(200, { 'Content-Type': 'application/javascript' });
+                res.end(content);
+            }
+        });
+    
+    }
+    else if (req.url === '/api' && req.method === 'GET') {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         
         const responseData = {
