@@ -10,7 +10,7 @@ class TBRShelf extends HTMLElement {
     render () {      
         this.innerHTML = `
         <p>This is the TBR Shelf Page</p>
-        `;
+        `; 
 
     }
 }

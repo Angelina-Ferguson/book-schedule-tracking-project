@@ -1,4 +1,6 @@
 import './components/TopBar.js';
+import './components/CurrentReadPreview.js'
+import './components/ReadingSchedulePreview.js'
 
 import './pages/PageContent.js';
 import './pages/Dashboard.js';
@@ -9,9 +11,9 @@ import './pages/ReadingSchedule.js';
 let selectedPage;
 
 document.addEventListener ("DOMContentLoaded", selectedPage = document.querySelector("#tb-btn-dashboard"));
-
+   
 document.querySelectorAll(".top-bar-btn").forEach( (btn) => { btn.addEventListener("click", (e) => {
-    if (selectedPage) {selectedPage.style.backgroundColor = "orange"; alert(selectedPage.textContent)}
+    if (selectedPage) {selectedPage.style.backgroundColor = "orange";}
     e.target.style.backgroundColor = "white";
     selectedPage = e.target
     var cleanedText = selectedPage.innerText.replace(" ", "").toLowerCase()
