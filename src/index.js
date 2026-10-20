@@ -1,12 +1,15 @@
+//components
 import './components/TopBar.js';
 import './components/CurrentReadPreview.js'
 import './components/ReadingSchedulePreview.js'
+import './components/LibraryAlerts.js'
+import './components/ReadingStatisticsPreview.js'
 
+// pages
 import './pages/PageContent.js';
 import './pages/Dashboard.js';
 import './pages/TBRShelf.js';
 import './pages/ReadingSchedule.js';
-
 
 let selectedPage;
 
