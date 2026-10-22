@@ -1,5 +1,6 @@
 //components
 import './components/TopBar.js';
+import './components/calendar.js';
 import './components/CurrentReadPreview.js'
 import './components/ReadingSchedulePreview.js'
 import './components/LibraryAlerts.js'

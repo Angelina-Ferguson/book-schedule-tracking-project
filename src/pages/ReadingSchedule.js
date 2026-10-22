@@ -9,7 +9,12 @@ class ReadingSchedule extends HTMLElement {
     }
     render () {      
         this.innerHTML = `
-        <p>This is the Reading Schedule</p>
+        <table> 
+            <tr>
+                <td id="sidebar-column"><mini-calendar></mini-calendar></td>
+                <td></td>
+            </tr>
+        </table>
         `;
 
     }
