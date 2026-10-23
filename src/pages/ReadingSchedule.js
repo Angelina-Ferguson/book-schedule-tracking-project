@@ -11,8 +11,8 @@ class ReadingSchedule extends HTMLElement {
         this.innerHTML = `
         <table> 
             <tr>
-                <td id="sidebar-column"><mini-calendar></mini-calendar></td>
-                <td></td>
+                <td id="sidebar-column"><reading-sched-side-bar><reading-sched-side-bar></td>
+                <td><read-sched-preview></read-sched-preview></td>
             </tr>
         </table>
         `;

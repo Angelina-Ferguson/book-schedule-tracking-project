@@ -11,12 +11,8 @@ class ReadingScheduleSideBar extends HTMLElement {
     render () {
         this.innerHTML = `
         <table>
-            <tr><calendar></calendar></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
+            <tr><td><h4>Enable a Reading Playlist Below</h4></td></tr>
+            <tr><td><input type="search" placeholder="Search Playlists"/></td></tr>
         </table>
         `;
     }

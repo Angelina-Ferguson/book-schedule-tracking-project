@@ -2,14 +2,16 @@
 import './components/TopBar.js';
 import './components/calendar.js';
 import './components/CurrentReadPreview.js'
+import './components/ReadingScheduleSideBar.js'
 import './components/ReadingSchedulePreview.js'
 import './components/LibraryAlerts.js'
 import './components/ReadingStatisticsPreview.js'
+import './components/PlaylistCard.js'
 
 // pages
 import './pages/PageContent.js';
 import './pages/Dashboard.js';
-import './pages/TBRShelf.js';
+import './pages/PlaylistShelf.js';
 import './pages/ReadingSchedule.js';
 
 let selectedPage;
@@ -25,8 +27,8 @@ document.querySelectorAll(".top-bar-btn").forEach( (btn) => { btn.addEventListen
         case "dashboard":
             document.querySelector('page-content').innerHTML = `<dashboard-page></dashboard-page>`;            
             break;
-        case "tbrshelf":
-            document.querySelector('page-content').innerHTML = `<tbr-shelf-page></tbr-shelf-page>`;            
+        case "playlistshelf":
+            document.querySelector('page-content').innerHTML = `<playlist-shelf-page></playlist-shelf-page>`;            
             break;
         case "readingschedule":
             document.querySelector('page-content').innerHTML = `<reading-schedule-page></reading-schedule-page>`;            
