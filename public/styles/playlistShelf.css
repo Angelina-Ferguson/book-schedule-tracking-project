@@ -1,7 +1,7 @@
 #topbar-row {
     width: 100vw;
     height: 10vh;
-    background-color: rgb(242, 240, 208);
+    background-color: #FFFFB3;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -12,7 +12,7 @@
 #topbar-cell:first-child {
     width: 30vw;
     height: 76vh;
-    background-color: bisque;
+    background-color: #FFFFB3;
     
 
 }
@@ -41,8 +41,8 @@ playlist-shelf-page button {
     text-transform: uppercase;
     margin: 1%;
     border-radius: 25px;
-    background-color: chocolate;
-    color: white;
+    background-color: #6A381F;
+    color: #FFFFB3;
     border: 0;
 }
 

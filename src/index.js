@@ -8,6 +8,9 @@ import './components/LibraryAlerts.js'
 import './components/ReadingStatisticsPreview.js'
 import './components/PlaylistCard.js'
 
+import './components/ShelflistBar.js'
+import './components/StatAlertBar.js'
+
 // pages
 import './pages/PageContent.js';
 import './pages/Dashboard.js';
@@ -19,8 +22,8 @@ let selectedPage;
 document.addEventListener ("DOMContentLoaded", selectedPage = document.querySelector("#tb-btn-dashboard"));
    
 document.querySelectorAll(".top-bar-btn").forEach( (btn) => { btn.addEventListener("click", (e) => {
-    if (selectedPage) {selectedPage.style.backgroundColor = "orange";}
-    e.target.style.backgroundColor = "white";
+    if (selectedPage) {selectedPage.style.backgroundColor = "#6A381F";}
+    e.target.style.backgroundColor = "#FFFFB3";
     selectedPage = e.target
     var cleanedText = selectedPage.innerText.replace(" ", "").toLowerCase()
     switch (cleanedText) {

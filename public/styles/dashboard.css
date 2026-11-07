@@ -1,4 +1,9 @@
+
+dasboard-page {
+    background-color: #FFFFB3;
+}
 #dashboard-layout-table {
+
     width: 100%;
     margin: 1% auto;
 }
@@ -64,3 +69,4 @@ library-alert img{
     height: 200px;
 
 }
+

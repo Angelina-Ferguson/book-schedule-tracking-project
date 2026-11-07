@@ -1,0 +1,73 @@
+body {
+    background-color: #502E2A;
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+    color: white;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+h6{
+    color: orange;
+}
+
+input[type="search"]{
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    padding: 5px;
+}
+input[type="search"]::placeholder{
+    color: orange;
+}
+
+
+
+/* LAYOUT CSS */
+#page-content {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+#page-content #main-view-column #current-read{
+    background-color: #764134;
+    border: 1.5px solid orange;
+    border-radius: 50px;
+    height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#page-content #main-view-column #main-viewer{
+    background-color: #764134;
+    border: 1.5px solid #764134;
+    border-radius: 0px;
+    height: 70vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#page-content #shelflist-bar,
+#page-content #stat-alert-bar {
+    background-color: #764134;
+    border: 1.5px solid orange;
+    border-radius: 50px;
+    height: 94vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+
+img {
+    width: 35px;
+    height: 35px;
+}
