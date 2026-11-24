@@ -8,7 +8,7 @@ h4 {
     text-decoration: underline;
 }
 
-h6{
+h5, h6{
     color: orange;
 }
 
@@ -34,6 +34,17 @@ input[type="search"]::placeholder{
     background-color: #764134;
     border: 1.5px solid orange;
     border-radius: 50px;
+    height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#page-content shelf-list-collection next-in-queue div{
+    background-color: #502E2A;
+    border: 1.5px solid rgb(91, 71, 34);
     height: 20vh;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -70,4 +81,104 @@ input[type="search"]::placeholder{
 img {
     width: 35px;
     height: 35px;
+}
+
+#page-content next-in-queue img,
+#page-content #current-read img {
+    width: 80px;
+    height: 100px;
+}
+
+#page-content next-in-queue table,
+#page-content #current-read table{
+    width: 100%;
+    padding: 5px;
+}
+
+#page-content next-in-queue table tr td,
+#page-content #current-read table tr td{
+    width: 30%;
+    text-align: center;
+}
+
+#page-content #stat-alert-bar {
+    align-content: center;
+    text-align: center;
+}
+
+#page-content #stat-alert-bar div.stat{
+    background-color: #764134;
+    border: 1.5px solid orange;
+    border-radius: 25px;
+    height: 10vh;
+    margin: 2px;
+    color: orange;
+    text-align: center;
+}
+
+#page-content #stat-alert-bar div.alert {
+    background-color: #764134;
+    border: 1.5px solid orange;
+    border-radius: 25px;
+    height: 23vh;
+    margin: 2px;
+    color: orange;
+    text-align: center;
+}
+
+button { 
+    border: 1.5px solid orange;
+    border-radius: 25px;
+    background-color: darkorange;
+    color: white;
+    padding: 5px;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: brown;
+}
+add-shelf-list div.shelf-cover,
+list-preview div.shelf-cover {
+    background-color: #281612;
+    opacity: 0.5;
+    border: 1.5px solid white;
+    color: white;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+
+}
+
+add-shelf-list div.shelf-cover:hover,
+list-preview div.shelf-cover:hover {
+    background-color: #522e24;
+}
+
+add-shelf-list {
+    padding: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+add-shelf-list table tr:nth-of-type(3) td{
+    padding-top: 10%;
+    width: 400px;
+}
+
+add-shelf-list table td{
+    padding: 5px;
+}
+
+
+add-shelf-list #book-table {
+    background-color: #502E2A;
+    padding: 10px;
+}
+
+add-shelf-list #book-table td{
+    padding: 2px;
 }

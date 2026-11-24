@@ -1,40 +1,56 @@
 //components
 import './components/TopBar.js';
 import './components/calendar.js';
-import './components/CurrentReadPreview.js'
 import './components/ReadingScheduleSideBar.js'
-import './components/ReadingSchedulePreview.js'
+
 import './components/LibraryAlerts.js'
 import './components/ReadingStatisticsPreview.js'
 import './components/PlaylistCard.js'
 
+
+//Layout Component
 import './components/ShelflistBar.js'
 import './components/StatAlertBar.js'
 
+//Widget Component
+import './components/CurrentRead.js'
+import './components/NextInQueue.js'
+import './components/ListPreview.js'
+
 // pages
-import './pages/PageContent.js';
+import './pages/ShelfListCollection.js'
+import './pages/AddShelfList.js'
+import './pages/PageContent.js'
+import './pages/LogIn.js'
 import './pages/Dashboard.js';
 import './pages/PlaylistShelf.js';
 import './pages/ReadingSchedule.js';
-
-let selectedPage;
-
-document.addEventListener ("DOMContentLoaded", selectedPage = document.querySelector("#tb-btn-dashboard"));
    
-document.querySelectorAll(".top-bar-btn").forEach( (btn) => { btn.addEventListener("click", (e) => {
-    if (selectedPage) {selectedPage.style.backgroundColor = "#6A381F";}
-    e.target.style.backgroundColor = "#FFFFB3";
-    selectedPage = e.target
-    var cleanedText = selectedPage.innerText.replace(" ", "").toLowerCase()
-    switch (cleanedText) {
-        case "dashboard":
-            document.querySelector('page-content').innerHTML = `<dashboard-page></dashboard-page>`;            
-            break;
-        case "playlistshelf":
-            document.querySelector('page-content').innerHTML = `<playlist-shelf-page></playlist-shelf-page>`;            
-            break;
-        case "readingschedule":
-            document.querySelector('page-content').innerHTML = `<reading-schedule-page></reading-schedule-page>`;            
-            break;
-    }
-})});
+
+
+document.querySelectorAll("shelf-list-collection .addList").forEach((item)=>{ item.addEventListener("click", (e) =>{
+    
+    document.querySelector('shelf-list-collection').innerHTML = `<add-shelf-list></add-shelf-list>`;
+}) })
+
+async function login () {
+    const api_url = `http://localhost:8888/routes/login`
+    fetch(api_url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({  
+            username: document.querySelector("#username-input").value,
+            password: document.querySelector("#password-input").value 
+        }),
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+
+}
+
+
+document.querySelector("page-content #log-in-btn").addEventListener("click", async (e) => {
+    login()
+});

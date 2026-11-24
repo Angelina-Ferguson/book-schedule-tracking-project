@@ -9,26 +9,12 @@ class Dashboard extends HTMLElement {
     }
     render () {      
         this.innerHTML = `
-         <table id="dashboard-layout-table">
-         <tr>
-            <td id="col1">
-                <curr-read-preview></curr-read-preview>
-            </td>
-            <td id="col2">
-                <read-sched-preview></read-sched-preview>
-            </td>
-            <td id="col3">
-                <table>
-                    <tr>
-                        <library-alert></library-alert>
-                    </tr>
-                    <tr>
-                        <read-stat-preview></read-stat-preview>
-                    </tr>
-                </table>
-            </td>
-         </tr>
-         </table>
+            <div id="shelflist-bar"><shelflist-bar></shelflist-bar></div>
+                <div id="main-view-column">
+                    <div id="current-read"><current-read></current-read></div>
+                    <div id="main-viewer"><shelf-list-collection></shelflist-collection></div>
+                </div>
+            <div id="stat-alert-bar"><stat-alert-bar></stat-alert-bar></div>
         `;
 
     }

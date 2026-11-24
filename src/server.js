@@ -1,10 +1,8 @@
-
+import 'dotenv/config';
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-
 
 const PORT = 5000;
 
@@ -65,15 +63,15 @@ const server = http.createServer((req, res) => {
         });
     
     } 
-    else if (req.url === '/api' && req.method === 'GET') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
+    else if (req.url === '/routes/') {
+        // res.writeHead(200, { 'Content-Type': 'application/json' });
         
-        const responseData = {
-            message: "Hello from pure Node.js (No Express!)",
-            timestamp: new Date().toLocaleTimeString()
-        };
+        // const responseData = {
+        //     message: "Hello from pure Node.js (No Express!)",
+        //     timestamp: new Date().toLocaleTimeString()
+        // };
 
-        res.end(JSON.stringify(responseData));
+        // res.end(JSON.stringify(responseData));
     } 
     // 3. Handle 404 Not Found
     else {
@@ -86,3 +84,41 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, '0.0.0.0', () => {
     console.log(`Pure Node.js server running at http://localhost:${PORT}`);
 });
+
+
+
+// async function main() { 
+    // console.log("---------------in main!")
+    // const user = {
+    //     username: "admin0",
+    //     password: "Admin123",
+    //     email: "angelinatoste@gmail.com",
+    //     subscribed_shelflist_ids: "{'123'}", 
+    //     avatar_photo: null,
+    //     bio: null,
+    // }
+    // console.log("---------------creating a user...")
+    // UsersController.createUser(user)
+    
+
+// console.log("looking for existing users:")
+//   const users2 = getUsers();
+//   console.log(users2)
+//   console.log('New user created!')
+// console.log("--3-------------in main!")
+//   users_db = await db.select().from(users);
+//   console.log('Getting all users from the database: ', users)
+
+//   await db
+//     .update(users)
+//     .set({
+//       username: "admin1",
+//     })
+//     .where(eq(users.email, user.email));
+//   console.log('User info updated!')
+
+//   await db.delete(users).where(eq(users.email, user.email));
+//   console.log('User deleted!')
+// }
+
+// main();

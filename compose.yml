@@ -4,6 +4,8 @@ services:
       context: .
     ports:
       - "5000:5000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       - NODEMON_LEGACY_WATCH=true
     develop:
@@ -15,5 +17,14 @@ services:
             - node_modules/
         - action: rebuild
           path: package.json
+
+  mysql:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=R00t"   
+
+
       
   
